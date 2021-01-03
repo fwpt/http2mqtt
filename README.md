@@ -64,12 +64,15 @@ Restart the systemctl daemon: `sudo systemctl daemon-reload`
 Enable the service on system start: `sudo systemctl enable http2mqtt@user.service`   
 Start the service now: `sudo systemctl start http2mqtt@user.service`    
 
-The web server should not be running on the configured port. 
+The web server should now be running on the configured port. 
 
 ## Limitations
-This is currently a basic implementation with no support for TLS (HTTPS) or authentication. While I do not plan to implement such features, the script can be extended easily to cater for this.  
+This is currently a basic implementation with no support for TLS (HTTPS) or authentication. While I do not plan to implement such features, the script can be easily extended to cater for this.  
 
-A basic topic whitelist is implemented along with some very basic validation on the topic and message string format. This implementation is not suitable to be exposed to the internet. 
+A topic whitelist is implemented along with some basic validation on the topic and message string format. This implementation is not suitable to be exposed to the internet because that would allow anyone to publish to your MQTT broker. 
 
 **Topic format**: MQTT topic should only contain printable ASCII characters, no spaces.   
 **Message format**: I only need a-Z, 0-9 and some special characters like space, dot, (, ), -, _ for my use-case but feel free to adapt if required. Message length is also set to maximum 100 characters at the moment.   
+
+## Help/support
+Please drop me a line if you face any issues.   
