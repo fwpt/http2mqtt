@@ -11,7 +11,7 @@ Ensure to URL encode the topic and message if the tool you use does not do this 
 `curl -s http://host:8234/source%2Ftopic/my%20message`   
 
 ## Installation
-Run the following commands to install to script and dependencies. Currently, only the Paho MQTT Python client library is required:
+Run the following commands to install the script and dependencies. Currently, only the Paho MQTT Python client library is required:
 ```
 git clone https://github.com/fwpt/http2mqtt.git
 cd http2mqtt
@@ -22,8 +22,6 @@ pip install paho-mqtt
 The following settings can be configured in the script:   
 | Variable  | Description           |
 | --------: |---------------------- |
-| AppId     | Alfabet AppId |
-
 | HTTP_HOST | Host/ip/interface to bind to or empty to bind to all interfaces (0.0.0.0) | 
 | HTTP_PORT | TCP port where the web service is exposed, default 8234 |
 | MQTT_HOST | MQTT broker ip/hostname, export MQTT_HOST=host or default to localhost |
